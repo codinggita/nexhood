@@ -4,7 +4,7 @@
 
 ### *Know Your Neighborhood. Own Your Space.*
 
-> **The intelligent real estate intelligence platform that turns neighborhood guesswork into data-driven decisions — and transforms apartment parking chaos into a frictionless digital experience.**
+> **The real estate intelligence platform that turns neighborhood guesswork into data-driven decisions — and transforms apartment parking chaos into a frictionless digital experience.**
 
 [![Figma Design](https://img.shields.io/badge/Figma-Design-blue?logo=figma)](https://www.figma.com/proto/iuxNtjRbFpwefcHVPplrlT/MID_SEM?node-id=84-2&p=f&t=lhKqj6hjNmcBMt8p-0&scaling=min-zoom&content-scaling=fixed&page-id=74%3A1289&starting-point-node-id=84%3A2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -12,7 +12,6 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.x-success)](https://www.mongodb.com/)
-[![Docker](https://img.shields.io/badge/Docker-ready-blue)](https://www.docker.com/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]()
 
 </div>
@@ -66,11 +65,9 @@ There is no single, structured, reliable platform that aggregates:
 
 | Data Category | Current Availability | NexHood Approach |
 |---|---|---|
-| School Quality Index | Scattered across state portals | Aggregated + AI-scored |
-| Crime Statistics | Police records, no public API | Normalized heatmap visualization |
-| Air Quality Index | CPCB portal, raw numbers | Real-time + trend analysis |
+| School Quality Index | Scattered across state portals | Aggregated + scored |
+| Air Quality Index | CPCB portal, raw numbers | Visualization from static/mock data |
 | Water Availability | Utility boards, inconsistent | Crowd-sourced + verified |
-| Power Reliability | DISCOM reports | Historical outage frequency |
 | Future Infrastructure | Master plans in 200-page PDFs | Extracted + mapped |
 
 ---
@@ -99,15 +96,9 @@ The result: conflicts, security risks, and a degraded living experience for ever
 **NexHood** is a full-stack real estate intelligence platform built around two core engines:
 
 ### Engine 1: Neighborhood Intelligence Platform (NIP)
-A data aggregation, scoring, and visualization system that gives homebuyers a **360° verified profile** of any neighborhood before they commit. Think of it as a credit score — but for localities.
+A data aggregation, scoring, and visualization system that gives homebuyers a **360° profile** of any neighborhood before they commit. The platform uses structured static and mock data to present neighborhood metrics across education, safety, environment, water & utilities, infrastructure, and growth potential.
 
-The platform pulls from:
-- Government open data APIs (CPCB, census, urban development boards)
-- Partner integrations (school boards, utility providers)
-- Crowd-sourced resident reports (verified through OTP + residency confirmation)
-- AI-driven inference (filling gaps using pattern matching across similar localities)
-
-Every neighborhood receives a **NexScore™** — a composite score out of 100 — broken into six sub-scores that buyers can weight according to their own priorities (e.g., a family with school-going children can prioritize the education sub-score).
+Every neighborhood receives a **NexScore™** — a composite score out of 100 — broken into six sub-scores that buyers can review to compare localities.
 
 ### Engine 2: Smart Visitor Parking System (SVPS)
 A QR-code-based, role-aware parking management system that brings digital accountability to apartment visitor access.
@@ -116,7 +107,7 @@ The flow is simple:
 1. Resident invites a visitor via the app → system generates a time-bound QR pass
 2. Visitor shows QR at gate → security guard scans → system validates and logs entry
 3. System allocates a guest parking slot → visitor navigates to it
-4. On expiry or exit, slot is automatically freed and audit log updated
+4. On expiry or exit, slot is freed and audit log updated
 
 No paper. No confusion. Full traceability.
 
@@ -126,61 +117,29 @@ No paper. No confusion. Full traceability.
 
 ### 🗺️ Neighborhood Analytics Dashboard
 
-- **Interactive map view** powered by Mapbox GL with color-coded NexScore overlays
-- **Comparison mode**: Compare up to 3 neighborhoods side-by-side across all metrics
-- **Historical trend charts**: See how a neighborhood's scores have changed over 5 years
-- **Drill-down cards**: Click any metric to see raw data, sources, and last-updated timestamp
-- **Satellite + Street view toggle** for visual context
-- **Pinning & bookmarking**: Save neighborhoods for later comparison
+- **Interactive map view** with color-coded NexScore overlays
+- **Comparison mode**: Compare neighborhoods side-by-side across all metrics
+- **Drill-down cards**: Click any metric to see data and last-updated timestamp
+- **Neighborhood data** served from static/mock JSON datasets
 
-### 🤖 AI-Based Scoring System (NexScore™)
+### 📊 Neighborhood Scoring (NexScore™)
 
-- Composite score (0–100) computed by a Python microservice
+- Composite score (0–100) computed from structured neighborhood data
 - Weighted average of 6 sub-scores:
   - 🏫 **Education Index**: School density, board affiliation, infrastructure rating
-  - 🔒 **Safety Index**: Crime incident frequency, type distribution, proximity to police station
-  - 🌬️ **Environment Index**: AQI, green cover percentage, proximity to industrial zones
-  - 💧 **Water & Utilities Index**: Water availability months/year, tanker dependency, power outage frequency
-  - 🏗️ **Infrastructure Index**: Road quality, metro/highway proximity, civic amenity density
-  - 🔮 **Growth Potential Index**: Upcoming projects, land use changes, price appreciation history
-- Buyers can **customize weights** via a slider interface
-- AI fills data gaps using **collaborative filtering** across localities with similar profiles
-- Score confidence rating shown alongside each metric (e.g., "High confidence — 3 verified sources")
-
-### 📡 Real-Time Environmental Data
-
-- Live AQI integration via **CPCB public API**
-- PM2.5, PM10, NO₂, SO₂ pollutant breakdown
-- 7-day and 30-day trend sparklines
-- **Alert system**: Push notification if AQI exceeds user-set threshold
-- Weather overlay: Temperature, humidity, wind patterns
-- Green zone mapping: Parks, lakes, tree cover density
-
-### 🔴 Crime Heatmaps
-
-- Normalized crime data visualized as heatmaps on the Mapbox canvas
-- Filter by crime type: theft, assault, vehicle crime, vandalism
-- Time-based filters: Last 30 days / 6 months / 1 year / 5 years
-- Distance radius selector (500m – 5km from property)
-- Crime trend: Improving / Stable / Worsening indicator
-
-### 🏗️ Infrastructure Prediction Insights
-
-- Extracted data from government master plans and smart city proposals
-- Upcoming metro lines, expressways, and flyovers mapped on timeline
-- "This neighborhood will get a metro station by 2027" — plain language cards
-- Historical accuracy of such predictions tracked and displayed
-- Linked to official document sources for verification
+  - 🔒 **Safety Index**: Crime incident frequency, type distribution
+  - 🌬️ **Environment Index**: AQI data, green cover percentage
+  - 💧 **Water & Utilities Index**: Water availability, power outage frequency
+  - 🏗️ **Infrastructure Index**: Road quality, metro/highway proximity
+  - 🔮 **Growth Potential Index**: Upcoming projects, price appreciation history
 
 ### 🚗 QR-Based Visitor Parking System
 
 - **Resident Portal**: Generate time-bound visitor passes (2 hours / 4 hours / full day / custom)
 - Pass carries: Visitor name, vehicle number, arrival window, host apartment
-- **QR code delivery**: Sent via WhatsApp / SMS / email to visitor
-- **Security Guard App**: Mobile-optimized scanner UI with one-tap verify
-- **Real-time slot dashboard**: Visual map of all guest slots, live availability
-- **Automatic expiry**: System flags overstay and notifies security + resident
-- **Blacklist management**: Admins can flag problematic visitors
+- **QR code generation**: Server-side QR generated via `qrcode` library
+- **Parking slot dashboard**: Visual map of all guest slots and availability
+- **Automatic expiry**: System flags overstay
 - **Audit logs**: Every scan event stored with timestamp, guard ID, outcome
 
 ### 🏠 Admin + Resident Dashboards
@@ -189,37 +148,29 @@ No paper. No confusion. Full traceability.
 - Society overview: Total units, active residents, parking capacity
 - Daily visitor traffic analytics
 - Incident reports management
-- Guard shift management
-- Bulk resident onboarding via CSV import
-- Export reports as PDF/Excel
 
 **Resident Dashboard:**
 - Generate and manage visitor passes
 - View parking slot map
-- Report neighborhood issues (pothole, streetlight, water)
 - Neighborhood score for their locality
-- Saved neighborhood comparisons
 
 ### 📱 Mobile-Friendly UI
 
 - Fully responsive design with **Tailwind CSS breakpoints**
-- PWA-ready (installable on Android/iOS home screen)
-- Optimized for low-bandwidth connections (lazy loading, compressed assets)
 - Touch-optimized map interactions
-- QR scanner uses native camera API via `react-qr-reader`
+- QR scanner uses native camera API
 
 ### 🔐 Role-Based Access Control (RBAC)
 
-Four distinct roles with granular permissions:
+Three distinct roles with granular permissions:
 
 | Role | Capabilities |
 |---|---|
-| **Super Admin** | Full platform access, manage societies, configure data sources |
-| **Society Admin** | Manage residents, configure parking, view all logs, export data |
-| **Resident** | Generate passes, view dashboards, submit reports |
-| **Security Guard** | Scan QR codes, log manual entries, view shift assignment |
+| **Society Admin** | Manage residents, configure parking, view all logs |
+| **Resident** | Generate passes, view dashboards |
+| **Security Guard** | Scan QR codes, log manual entries |
 
-JWT-based authentication with refresh token rotation. Session invalidation on suspicious activity.
+JWT-based authentication with middleware protection on all private routes.
 
 ---
 
@@ -230,16 +181,11 @@ JWT-based authentication with refresh token rotation. Session invalidation on su
 | Technology | Purpose |
 |---|---|
 | **React.js 18** | Component-based UI framework |
-| **Next.js 14** | SSR, routing, API routes, SEO optimization |
+| **React Router** | Client-side routing |
 | **Tailwind CSS 3** | Utility-first responsive styling |
-| **Zustand** | Lightweight global state management |
-| **Redux Toolkit** | Complex async state (data fetching, caching) |
 | **Recharts** | Responsive chart components (line, bar, radar) |
-| **Chart.js** | Custom canvas-based visualizations |
-| **Mapbox GL JS** | Interactive maps, heatmaps, 3D layers |
 | **Axios** | HTTP client with interceptors for auth headers |
-| **React Hook Form** | Performant form management with validation |
-| **Framer Motion** | Smooth page transitions and micro-animations |
+| **Context API** | Global auth state management |
 
 ### Backend
 
@@ -247,140 +193,98 @@ JWT-based authentication with refresh token rotation. Session invalidation on su
 |---|---|
 | **Node.js 18** | Runtime environment |
 | **Express.js** | REST API framework |
-| **Socket.io** | Real-time parking slot updates, live notifications |
-| **JWT + Refresh Tokens** | Stateless authentication |
-| **Multer** | File uploads (profile photos, society documents) |
-| **node-cron** | Scheduled jobs (QR expiry, data sync) |
+| **JWT** | Stateless authentication |
 | **qrcode** | Server-side QR code generation as PNG/SVG |
-| **Nodemailer** | Transactional emails |
-| **Winston** | Structured logging |
 | **Joi** | Request payload validation |
 
 ### Database
 
 | Technology | Purpose |
 |---|---|
-| **MongoDB 6** | Primary database (neighborhoods, users, passes) |
+| **MongoDB 6** | Primary database (neighborhoods, users, visitor passes) |
 | **Mongoose** | ODM with schema validation and middleware |
-| **PostgreSQL 15** | Relational data (society structures, slot maps) |
-| **Prisma** | Type-safe ORM for PostgreSQL |
-| **Redis** | Session caching, rate limiting, pub/sub for Socket.io |
 
-### AI / Data Services
+### Tooling
 
 | Technology | Purpose |
 |---|---|
-| **Python 3.11 microservice** | NexScore computation engine |
-| **FastAPI** | Expose ML inference as REST endpoints |
-| **Pandas / NumPy** | Data normalization and aggregation |
-| **Scikit-learn** | Collaborative filtering, gap-filling model |
-| **CPCB API** | Live AQI data feed |
-
-### DevOps & Tooling
-
-| Technology | Purpose |
-|---|---|
-| **Docker + Docker Compose** | Containerized local and production environments |
-| **GitHub Actions** | CI/CD pipeline (lint → test → build → deploy) |
 | **ESLint + Prettier** | Code style enforcement |
-| **Husky + lint-staged** | Pre-commit hooks |
-| **Jest + Supertest** | Unit and integration testing |
-| **Playwright** | End-to-end testing |
 | **dotenv** | Environment variable management |
 
 ---
 
 ## 🏛️ System Architecture
 
-NexHood follows a **microservices-lite** architecture — modular services with shared infrastructure, deployable independently but orchestrated via Docker Compose in development.
+NexHood follows a clean **MVC architecture** — with a React frontend (View), Express controllers (Controller), and Mongoose models (Model).
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │                          CLIENT LAYER                               │
 │                                                                     │
-│   ┌──────────────────────┐        ┌──────────────────────────┐     │
-│   │   Next.js Web App    │        │  Mobile PWA / Guard App  │     │
-│   │  (Resident / Admin)  │        │    (Security Guard UI)   │     │
-│   └──────────┬───────────┘        └────────────┬─────────────┘     │
-└──────────────┼─────────────────────────────────┼───────────────────┘
-               │  HTTPS / WSS                    │ HTTPS / WSS
-               ▼                                 ▼
+│   ┌──────────────────────────────────────────────────────────┐     │
+│   │              React Web App (Vite + React Router)          │     │
+│   │         Home · Login · Dashboard · Neighborhood · Parking │     │
+│   └──────────────────────────┬───────────────────────────────┘     │
+└──────────────────────────────┼──────────────────────────────────────┘
+                               │  HTTPS (REST API calls via Axios)
+                               ▼
 ┌──────────────────────────────────────────────────────────────────────┐
-│                         API GATEWAY (Express)                        │
-│                     Rate limiting · Auth middleware                  │
-│                     CORS · Request logging · JWT verify              │
-└───────┬────────────────────────┬────────────────────────┬────────────┘
-        │                        │                        │
-        ▼                        ▼                        ▼
+│                      Express.js API Server                           │
+│               Auth Middleware · CORS · Request Logging               │
+└───────┬────────────────────────┬────────────────────────────────────┘
+        │                        │                        
+        ▼                        ▼                        
 ┌───────────────┐   ┌────────────────────┐   ┌───────────────────────┐
-│  Neighborhood │   │  Parking & Visitor │   │   User & Auth Service │
-│   Service     │   │     Service        │   │                       │
-│               │   │                   │   │  - Register / Login   │
-│  - Fetch data │   │  - Generate QR    │   │  - Role assignment    │
-│  - Score calc │   │  - Verify QR      │   │  - Token rotation     │
+│  Neighborhood │   │  Parking & Visitor │   │   User & Auth         │
+│  Controller   │   │  Controller        │   │   Controller          │
+│               │   │                   │   │                       │
+│  - Fetch data │   │  - Generate QR    │   │  - Register / Login   │
+│  - Score calc │   │  - Verify QR      │   │  - Role assignment    │
 │  - Reports    │   │  - Slot tracking  │   │  - Profile mgmt       │
 └───────┬───────┘   └────────┬───────────┘   └──────────┬────────────┘
         │                    │                           │
-        ▼                    ▼                           ▼
-┌──────────────┐    ┌────────────────┐        ┌──────────────────────┐
-│   MongoDB    │    │  PostgreSQL    │        │       Redis          │
-│              │    │                │        │                      │
-│  - Neighbor- │    │  - Parking     │        │  - Sessions          │
-│    hood docs │    │    slot maps   │        │  - Rate limit keys   │
-│  - Reports   │    │  - Society     │        │  - Socket.io pub/sub │
-│  - Audit logs│    │    structures  │        │  - QR token cache    │
-└──────────────┘    └────────────────┘        └──────────────────────┘
-        │
-        ▼
-┌──────────────────────────────────────┐
-│        Python AI Microservice        │
-│           (FastAPI + ML)             │
-│                                      │
-│  - NexScore computation              │
-│  - Data gap filling (sklearn)        │
-│  - Trend analysis                    │
-│  - Exposed via REST at :8001         │
-└──────────────────────────────────────┘
-        │
-        ▼
-┌──────────────────────────────────────┐
-│         External Data Sources        │
-│                                      │
-│  - CPCB API (AQI)                    │
-│  - OpenStreetMap (geo data)          │
-│  - Government open data portals      │
-│  - School board APIs                 │
-└──────────────────────────────────────┘
+        └────────────────────┴───────────────────────────┘
+                                      │
+                                      ▼
+                          ┌──────────────────────┐
+                          │       MongoDB         │
+                          │                      │
+                          │  - Users             │
+                          │  - Neighborhoods     │
+                          │  - Visitor Passes    │
+                          └──────────────────────┘
+                                      │
+                                      ▼
+                          ┌──────────────────────┐
+                          │    Static Mock Data   │
+                          │  (neighborhoods.json  │
+                          │   neighborhoods.js)   │
+                          └──────────────────────┘
 ```
 
 ### API Request Flow — Neighborhood Report
 
 ```
-User clicks "Generate Report"
+User clicks "View Neighborhood"
         │
         ▼
-Next.js frontend calls POST /api/generate-report { locality_id, weights }
+React frontend calls GET /api/neighborhood-data/:locality_id
         │
         ▼
-Express API Gateway validates JWT, routes to Neighborhood Service
+Express API validates JWT via authMiddleware, routes to neighborhoodController
         │
-        ├──► MongoDB: fetch cached neighborhood base data
+        ├──► MongoDB: fetch neighborhood document
         │
-        ├──► CPCB API: fetch live AQI (if last sync > 15 min)
-        │
-        └──► Python microservice POST /score { raw_data, weights }
-                    │
-                    ▼
-              Returns NexScore + sub-scores + confidence ratings
+        └──► Static mock data: fill missing fields from neighborhoods.js
         │
         ▼
-Neighborhood Service composes full report object, stores to MongoDB
+Controller composes full neighborhood object
         │
         ▼
 Response returned to frontend as JSON
         │
         ▼
-Next.js renders dashboard with Recharts + Mapbox visualization
+React renders dashboard with Recharts + map visualization
 ```
 
 ---
@@ -477,11 +381,7 @@ nexhood/
 Ensure you have the following installed:
 
 - **Node.js** >= 18.0.0
-- **Python** >= 3.11
-- **Docker** and **Docker Compose** v2+
-- **MongoDB** 6.x (or use Docker)
-- **PostgreSQL** 15+ (or use Docker)
-- **Redis** 7+ (or use Docker)
+- **MongoDB** 6.x (local or Atlas)
 - **Git**
 
 ---
@@ -493,15 +393,22 @@ git clone https://github.com/your-org/nexhood.git
 cd nexhood
 ```
 
-### 2. Install Node.js Dependencies (Monorepo)
+### 2. Install Dependencies
 
 ```bash
-npm install       # Installs all workspace dependencies via Turborepo
+# Install root dependencies
+npm install
+
+# Install client dependencies
+cd client && npm install
+
+# Install server dependencies
+cd ../server && npm install
 ```
 
 ### 3. Set Up Environment Variables
 
-#### Backend (`services/api/.env`)
+#### Backend (`server/.env`)
 
 ```env
 # App
@@ -511,76 +418,35 @@ PORT=4000
 # MongoDB
 MONGODB_URI=mongodb://localhost:27017/nexhood
 
-# PostgreSQL (Prisma)
-DATABASE_URL=postgresql://nexhood_user:yourpassword@localhost:5432/nexhood_parking
-
-# Redis
-REDIS_URL=redis://localhost:6379
-
 # JWT
 JWT_SECRET=your-very-long-random-secret-key-here
-JWT_REFRESH_SECRET=another-very-long-random-secret-key
-JWT_EXPIRES_IN=15m
-JWT_REFRESH_EXPIRES_IN=7d
-
-# External APIs
-CPCB_API_KEY=your_cpcb_api_key
-MAPBOX_SECRET_TOKEN=sk.eyXXXXXXXX
-
-# Email (Nodemailer)
-SMTP_HOST=smtp.sendgrid.net
-SMTP_PORT=587
-SMTP_USER=apikey
-SMTP_PASS=your_sendgrid_api_key
-MAIL_FROM=noreply@nexhood.in
-
-# AI Microservice
-AI_ENGINE_URL=http://localhost:8001
+JWT_EXPIRES_IN=7d
 
 # QR Code
-QR_BASE_URL=https://app.nexhood.in/verify
+QR_BASE_URL=http://localhost:3000/verify
 ```
 
-#### Frontend (`apps/web/.env.local`)
+#### Frontend (`client/.env`)
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:4000/api
-NEXT_PUBLIC_MAPBOX_TOKEN=pk.eyXXXXXXXX
-NEXT_PUBLIC_SOCKET_URL=http://localhost:4000
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-```
-
-#### Python AI Engine (`services/ai-engine/.env`)
-
-```env
-ENV=development
-PORT=8001
-MODEL_PATH=./models/nexscore_v2.pkl
-CPCB_API_KEY=your_cpcb_api_key
+VITE_API_URL=http://localhost:4000/api
 ```
 
 ---
 
 ### 4. Database Setup
 
-#### Run with Docker (Recommended)
+#### Start MongoDB
 
 ```bash
-docker-compose up -d mongodb postgres redis
-```
-
-#### Run Prisma Migrations (PostgreSQL)
-
-```bash
-cd services/api
-npx prisma migrate dev --name init
-npx prisma generate
+# If running locally
+mongod
 ```
 
 #### Seed Initial Data
 
 ```bash
-cd services/api
+cd server
 npm run seed
 # Populates: sample neighborhoods, demo society, admin user
 ```
@@ -589,36 +455,12 @@ npm run seed
 
 ### 5. Start the Development Servers
 
-#### Option A — All services with Docker Compose
-
-```bash
-docker-compose up --build
-```
-
-This starts:
-- **Next.js frontend** on `http://localhost:3000`
-- **Express API** on `http://localhost:4000`
-- **Python AI Engine** on `http://localhost:8001`
-- **MongoDB** on `localhost:27017`
-- **PostgreSQL** on `localhost:5432`
-- **Redis** on `localhost:6379`
-
-#### Option B — Manual (for active development)
-
 ```bash
 # Terminal 1 — Backend API
-cd services/api && npm run dev
+cd server && npm run dev
 
 # Terminal 2 — Frontend
-cd apps/web && npm run dev
-
-# Terminal 3 — AI Engine
-cd services/ai-engine
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8001
-
-# Terminal 4 — Databases (Docker)
-docker-compose up -d mongodb postgres redis
+cd client && npm run dev
 ```
 
 ---
@@ -627,9 +469,8 @@ docker-compose up -d mongodb postgres redis
 
 Visit the following URLs to confirm everything is running:
 
-- Frontend: `http://localhost:3000`
+- Frontend: `http://localhost:5173`
 - API Health: `http://localhost:4000/api/health`
-- AI Engine Docs: `http://localhost:8001/docs` (FastAPI auto-generated)
 
 Default credentials after seeding:
 - **Admin**: `admin@nexhood.in` / `Admin@123`
@@ -646,61 +487,32 @@ Default credentials after seeding:
 3. **Search** for a locality by name or pin code (e.g., "Baner, Pune")
 4. View the **NexScore™ overview card** — overall score + 6 sub-scores
 5. Click **"View Full Analysis"** to expand the dashboard:
-   - Explore the AQI trend chart (last 30 days)
-   - Toggle the crime heatmap by incident type
+   - Explore the AQI trend chart
    - View the infrastructure timeline (upcoming projects)
-6. Adjust **priority weights** with the slider panel (e.g., boost Education to 40%)
-   - NexScore recalculates in real-time
-7. Click **"Compare"** to add a second or third neighborhood side-by-side
-8. Click **"Generate Report"** to receive a downloadable PDF report via email
+6. Click **"Compare"** to add a second neighborhood side-by-side
 
 ---
 
-### Workflow 2: Generating a Neighborhood Intelligence Report
-
-```
-User → /dashboard/neighborhood → Search "Whitefield, Bangalore"
-      ↓
-System fetches cached data + live AQI update
-      ↓
-AI engine computes NexScore with default weights
-      ↓
-Dashboard renders:
-  - Score card (NexScore: 74/100)
-  - Sub-scores (Education: 81, Safety: 68, Environment: 55...)
-  - AQI line chart + pollutant breakdown
-  - Crime heatmap (filter: last 6 months)
-  - Infrastructure timeline (Purple Line Metro, 2026)
-      ↓
-User adjusts weights → real-time score recalculation
-      ↓
-User clicks "Generate PDF Report"
-      ↓
-POST /api/generate-report → background job → email delivered in ~30s
-```
-
----
-
-### Workflow 3: Visitor Parking QR Flow
+### Workflow 2: Visitor Parking QR Flow
 
 **Step 1 — Resident generates a pass:**
 1. Resident logs in → goes to **Parking** section
 2. Clicks **"Invite Visitor"**
 3. Fills form: Visitor Name, Vehicle Number, Expected Arrival, Duration
 4. Clicks **"Generate Pass"**
-5. System creates a time-bound QR code and sends it to visitor via WhatsApp/SMS
+5. System creates a time-bound QR code
 
 **Step 2 — Visitor arrives:**
 1. Visitor shows QR code on phone to security guard
 2. Guard opens the **Guard App** (`/guard`) and taps **"Scan QR"**
 3. Camera opens → scans QR
-4. System validates: checks token signature, expiry, vehicle match
+4. System validates: checks token signature and expiry
 5. If valid: ✅ Green screen with slot assignment (e.g., "G-07")
 6. If expired/invalid: ❌ Red screen with reason
 
-**Step 3 — Real-time slot update:**
-1. Socket.io event fires → Resident's dashboard shows parking slot as "Occupied"
-2. On visitor exit, guard marks exit → slot freed → socket event → dashboard updates
+**Step 3 — Slot update:**
+1. Resident's dashboard shows parking slot as "Occupied"
+2. On visitor exit, guard marks exit → slot freed → dashboard updates
 
 
 ## 🎨 Design & Prototypes
@@ -719,7 +531,6 @@ https://www.figma.com/proto/iuxNtjRbFpwefcHVPplrlT/MID_SEM?page-id=74%3A1289&nod
 **Key Screens Designed:**
 - Neighborhood Explorer
 - NexScore Dashboard
-- Crime Heatmap Interface
 - Infrastructure Timeline
 - Visitor Pass Generation
 - QR Scanner (Guard App)
@@ -736,14 +547,14 @@ https://www.figma.com/proto/iuxNtjRbFpwefcHVPplrlT/MID_SEM?page-id=74%3A1289&nod
 |---|---|
 | Neighborhood Explorer | ![](https://res.cloudinary.com/dsvggz83x/image/upload/v1776880132/landing_pzyto4.png) |
 | NexScore™ Dashboard | ![](https://res.cloudinary.com/dsvggz83x/image/upload/v1776880132/dashboard_covjyn.png) |
-| Crime Heatmap View | ![](https://res.cloudinary.com/dsvggz83x/image/upload/v1776880132/crime_hbntpp.png) |
 | Infrastructure Timeline | ![](https://res.cloudinary.com/dsvggz83x/image/upload/v1776880132/infra_zwjzcc.png) |
 | Neighborhood Comparison | ![](https://res.cloudinary.com/dsvggz83x/image/upload/v1776880132/compare_wj07zk.png) |
+
 ---
 
 ## 📡 API Documentation
 
-Base URL: `https://api.nexhood.in/api/v1`
+Base URL: `http://localhost:4000/api`
 
 All authenticated endpoints require:
 ```
@@ -774,15 +585,14 @@ Register a new user.
 {
   "success": true,
   "user": { "id": "usr_xyz", "name": "Rahul Sharma", "role": "resident" },
-  "accessToken": "eyJhbGci...",
-  "refreshToken": "eyJhbGci..."
+  "accessToken": "eyJhbGci..."
 }
 ```
 
 ---
 
 #### `POST /auth/login`
-Authenticate and receive tokens.
+Authenticate and receive token.
 
 ---
 
@@ -808,13 +618,7 @@ Fetch full neighborhood data object.
       "infrastructure": 80,
       "growth_potential": 74
     },
-    "aqi": {
-      "current": 142,
-      "category": "Moderate",
-      "last_updated": "2025-04-15T08:30:00Z"
-    },
-    "data_confidence": "high",
-    "sources": ["CPCB", "Pune Police Open Data", "MHRD School Census"]
+    "data_confidence": "high"
   }
 }
 ```
@@ -827,43 +631,11 @@ Compare multiple localities.
 **Request:**
 ```json
 {
-  "locality_ids": ["loc_pune_baner", "loc_pune_wakad", "loc_pune_kothrud"],
-  "weights": {
-    "education": 0.30,
-    "safety": 0.25,
-    "environment": 0.15,
-    "water_utilities": 0.10,
-    "infrastructure": 0.10,
-    "growth_potential": 0.10
-  }
+  "locality_ids": ["loc_pune_baner", "loc_pune_wakad", "loc_pune_kothrud"]
 }
 ```
 
-**Response `200`:** Array of scored locality objects with custom-weighted NexScores.
-
----
-
-#### `POST /generate-report`
-Generate a full PDF neighborhood intelligence report.
-
-**Request:**
-```json
-{
-  "locality_id": "loc_pune_baner",
-  "weights": { "education": 0.3, "safety": 0.3, "environment": 0.2, "water_utilities": 0.1, "infrastructure": 0.05, "growth_potential": 0.05 },
-  "email": "rahul@example.com"
-}
-```
-
-**Response `202`:**
-```json
-{
-  "success": true,
-  "job_id": "rpt_job_991a",
-  "message": "Report generation queued. You will receive an email within 2 minutes.",
-  "estimated_delivery": "2025-04-15T09:05:00Z"
-}
-```
+**Response `200`:** Array of scored locality objects.
 
 ---
 
@@ -879,9 +651,7 @@ Generate a new time-bound QR visitor pass. Requires `resident` role.
   "vehicle_number": "MH12AB1234",
   "arrival_window_start": "2025-04-15T14:00:00Z",
   "duration_hours": 4,
-  "host_apartment": "B-402",
-  "notify_via": ["whatsapp", "email"],
-  "visitor_contact": "+91-9876543210"
+  "host_apartment": "B-402"
 }
 ```
 
@@ -889,7 +659,7 @@ Generate a new time-bound QR visitor pass. Requires `resident` role.
 ```json
 {
   "pass_id": "vp_7f9c2a",
-  "qr_code_url": "https://api.nexhood.in/qr/vp_7f9c2a.png",
+  "qr_code_url": "http://localhost:4000/qr/vp_7f9c2a.png",
   "valid_until": "2025-04-15T18:00:00Z",
   "slot_pre_assigned": "G-07",
   "status": "active"
@@ -951,7 +721,7 @@ Mark a visitor as exited and free the parking slot.
 ---
 
 #### `GET /parking/slots/:society_id`
-Get real-time parking slot map for a society.
+Get parking slot map for a society.
 
 **Response `200`:**
 ```json
@@ -981,7 +751,7 @@ Get real-time parking slot map for a society.
   city: String,
   state: String,
   coordinates: { lat: Number, lng: Number },
-  nexscore: Number,           // Cached composite score
+  nexscore: Number,           // Composite score
   sub_scores: {
     education: Number,
     safety: Number,
@@ -992,11 +762,9 @@ Get real-time parking slot map for a society.
   },
   raw_data: {
     aqi: { current: Number, trend: Array },
-    crime_incidents: Array,
     schools: Array,
     upcoming_projects: Array
   },
-  data_sources: [String],
   last_synced: Date,
   created_at: Date
 }
@@ -1013,7 +781,7 @@ Get real-time parking slot map for a society.
   vehicle_number: String,
   host_apartment: String,
   slot_assigned: String,
-  qr_token: String,           // Signed JWT-like token embedded in QR
+  qr_token: String,           // Signed token embedded in QR
   valid_from: Date,
   valid_until: Date,
   status: Enum['active', 'used', 'expired', 'revoked'],
@@ -1027,39 +795,20 @@ Get real-time parking slot map for a society.
 }
 ```
 
-### PostgreSQL Tables (Prisma Schema)
-
-#### `societies`
-| Column | Type | Description |
-|---|---|---|
-| id | UUID PK | Society unique ID |
-| name | VARCHAR | Society name |
-| address | TEXT | Full address |
-| city | VARCHAR | City |
-| admin_id | UUID FK | Linked admin user |
-| created_at | TIMESTAMP | |
-
-#### `parking_slots`
-| Column | Type | Description |
-|---|---|---|
-| id | UUID PK | |
-| society_id | UUID FK | Linked society |
-| slot_code | VARCHAR | Display code (e.g., "G-07") |
-| slot_type | ENUM | `resident` / `guest` |
-| is_available | BOOLEAN | Real-time availability |
-| current_pass_id | VARCHAR | Linked active pass if occupied |
-
 #### `users`
-| Column | Type | Description |
-|---|---|---|
-| id | UUID PK | |
-| name | VARCHAR | |
-| email | VARCHAR UNIQUE | |
-| password_hash | VARCHAR | bcrypt |
-| role | ENUM | `super_admin`, `admin`, `resident`, `guard` |
-| society_id | UUID FK | |
-| apartment | VARCHAR | e.g., "B-402" |
-| is_active | BOOLEAN | |
+```js
+{
+  _id: ObjectId,
+  name: String,
+  email: String,              // Unique
+  password_hash: String,      // bcrypt
+  role: Enum['admin', 'resident', 'guard'],
+  society_id: ObjectId,
+  apartment: String,          // e.g., "B-402"
+  is_active: Boolean,
+  created_at: Date
+}
+```
 
 ---
 
@@ -1067,7 +816,6 @@ Get real-time parking slot map for a society.
 
 ### 🤖 Advanced AI Predictions
 - **Price appreciation forecast**: ML model trained on historical price data + infrastructure developments to predict 2–5 year property value growth
-- **Neighborhood gentrification early-warning**: Detect early signals of neighborhood transformation using permit data, business opening patterns, and demographic shifts
 - **Personalized matching**: Input your lifestyle profile and get ranked neighborhood recommendations
 
 ### 📱 Native Mobile App
@@ -1080,7 +828,6 @@ Get real-time parking slot map for a society.
 - Ultrasonic sensors in parking slots transmit live occupancy via MQTT
 - Automatic slot status updates without manual guard intervention
 - Dashboard shows sensor battery levels and health
-- Reduces dependency on manual scan-out process
 
 ### 🏛️ Government Data Integration
 - Direct API integrations with:
@@ -1104,50 +851,31 @@ Get real-time parking slot map for a society.
 
 ## 🧗 Challenges Faced
 
-### 1. Data Aggregation at Scale
-**Challenge:** Government data exists in 50+ formats — some as PDFs, some as Excel sheets, some as poorly structured HTML tables, and some behind login walls.
+### 1. Data Aggregation
+**Challenge:** Government data exists in 50+ formats — some as PDFs, some as Excel sheets, some as poorly structured HTML tables.
 
-**Approach:** Built a multi-strategy scraper pipeline with:
-- `pdf-parse` for PDF extraction
-- `cheerio` for HTML scraping
-- Manual upload fallback for locked data
-- Volunteer data verification programme for crowd-sourced inputs
-
-**Ongoing:** Coverage varies by city — metros have 85%+ coverage, tier-3 cities are at ~40%.
+**Approach:** Used structured static JSON datasets (`neighborhoods.json` / `neighborhoods.js`) as a reliable fallback, with mock data representing verified neighborhood metrics. Coverage can be extended as real data sources become available.
 
 ---
 
-### 2. Real-Time Data Accuracy
-**Challenge:** AQI readings can change drastically within hours. Crime data is often delayed by weeks. Infrastructure plans change without announcement.
+### 2. QR Token Security
+**Challenge:** A malicious user could screenshot a valid QR and share it, or attempt to reuse expired tokens.
 
 **Approach:**
-- AQI: Pulled every 15 minutes from CPCB API with Redis caching
-- Crime data: Synced weekly with a stale-data warning shown to users
-- Scores show "Data freshness" indicators (🟢 Fresh / 🟡 Aging / 🔴 Stale)
-- Version history kept for all data points — users can see data from any date
+- QR tokens are signed with HMAC using a server-side secret
+- Token validity is checked against expiry on every scan
+- Guard app displays registered vehicle number for manual cross-check
+- 5-minute post-expiry grace window to handle clock drift
 
 ---
 
 ### 3. Privacy & Misuse Concerns
-**Challenge:** Detailed crime heatmaps can stigmatize areas. Visitor pass data contains PII. QR token security must be airtight.
+**Challenge:** Visitor pass data contains PII. QR token security must be airtight.
 
 **Approach:**
-- Crime data is shown at **ward/zone level**, never street-level granularity
-- Visitor PII encrypted at rest with AES-256
-- QR tokens are **one-time-use signed JWTs** with 15-minute validity windows after activation
-- DPDP Act (India) compliance review completed before beta launch
-- GDPR-aligned data deletion flows implemented
-
----
-
-### 4. QR Token Security
-**Challenge:** A malicious user could screenshot a valid QR and share it, or attempt to reuse expired tokens.
-
-**Approach:**
-- QR tokens are signed with HMAC-SHA256 using a server-side secret
-- Redis tracks all used tokens — a second scan attempt returns `already_used`
-- Guard app displays a photo of the registered vehicle for manual cross-check
-- 5-minute post-expiry grace window to handle clock drift
+- Visitor PII encrypted at rest
+- QR tokens are time-bound with expiry validation
+- Role-based access ensures only authorized guards can verify passes
 
 ---
 
@@ -1168,15 +896,13 @@ We welcome contributions from developers, designers, data engineers, and domain 
 - 🗄️ **Data**: Help source and clean neighborhood datasets for new cities
 - 🎨 **Design**: UI/UX improvements, accessibility
 - 🔧 **Backend**: New API endpoints, performance optimization
-- 🧠 **AI/ML**: Improve NexScore model accuracy
 - 📖 **Docs**: Improve documentation and add usage examples
-- 🌐 **i18n**: Add language translations
 
 ### Code Standards
 
 - All code must pass ESLint + Prettier checks
-- New API endpoints must include Joi validation and Jest tests
-- React components must have TypeScript types defined
+- New API endpoints must include Joi validation
+- React components must follow hook-based patterns
 - Commits follow [Conventional Commits](https://www.conventionalcommits.org/) format
 
 ### Reporting Issues
