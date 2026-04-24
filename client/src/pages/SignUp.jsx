@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
+import { useAuth } from '../context/AuthContext';
 import { neu, N, useNeuState } from '../styles/neumorphism';
 
 const SignUp = () => {
     const navigate = useNavigate();
+    const { login } = useAuth();
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     const nameState = useNeuState(neu.inset);
     const emailState = useNeuState(neu.inset);
     const passState = useNeuState(neu.inset);
     const btnState = useNeuState(neu.button);
     const googleBtnState = useNeuState(neu.button);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        login(email || 'newuser@example.com', 'resident');
+        navigate('/dashboard');
+    };
 
     return (
         <div style={{
@@ -53,7 +66,7 @@ const SignUp = () => {
                     Join NexHood and unlock deep-dive <br />neighborhood intelligence.
                 </p>
 
-                <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <form onSubmit={handleSubmit} style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                         <label style={{ fontSize: '12px', fontWeight: 800, color: N.textMuted, marginLeft: '16px' }}>
                             FULL NAME
@@ -61,6 +74,8 @@ const SignUp = () => {
                         <input
                             {...nameState}
                             type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                             placeholder="e.g. Alex Johnson"
                             style={{
                                 ...nameState.style,
@@ -81,6 +96,8 @@ const SignUp = () => {
                         <input
                             {...emailState}
                             type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             placeholder="e.g. alex@example.com"
                             style={{
                                 ...emailState.style,
@@ -101,6 +118,8 @@ const SignUp = () => {
                         <input
                             {...passState}
                             type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             placeholder="Min. 8 characters"
                             style={{
                                 ...passState.style,
@@ -116,6 +135,7 @@ const SignUp = () => {
 
                     <motion.button
                         {...btnState}
+                        type="submit"
                         whileHover={{ scale: 1.02 }}
                         whileTap={neu.buttonPressed}
                         style={{
@@ -126,17 +146,20 @@ const SignUp = () => {
                             borderRadius: '16px',
                             fontWeight: 800,
                             fontSize: '16px',
+                            border: 'none',
                             marginTop: '10px'
                         }}
                     >
                         Create Account
                     </motion.button>
+                </form>
 
+                <div style={{ width: '100%' }}>
                     <div style={{
                         display: 'flex',
                         alignItems: 'center',
                         gap: '15px',
-                        margin: '10px 0'
+                        margin: '20px 0'
                     }}>
                         <div style={{ flex: 1, height: '1px', background: '#d1d9e6' }} />
                         <span style={{ fontSize: '12px', fontWeight: 700, color: N.textMuted }}>OR</span>
@@ -154,10 +177,12 @@ const SignUp = () => {
                             justifyContent: 'center',
                             gap: '12px',
                             padding: '14px',
+                            width: '100%',
                             borderRadius: '16px',
                             fontWeight: 700,
                             fontSize: '15px',
-                            color: N.text
+                            color: N.text,
+                            border: 'none'
                         }}
                     >
                         <FcGoogle size={24} />
