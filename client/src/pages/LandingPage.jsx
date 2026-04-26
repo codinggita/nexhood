@@ -10,21 +10,27 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import Footer from '../components/Footer';
 
 const LandingPage = () => {
-    return (
-        <div style={{ background: '#e0e5ec', minHeight: '100vh' }}>
-            <Navbar />
-            <main>
-                <HeroSection />
-                <SmartNeighborhoodSection />
-                <MapSection />
-                <PrecisionSection />
-                <SmartParkingSection />
-                <TemporalSection />
-                <TestimonialsSection />
-            </main>
-            <Footer />
-        </div>
-    );
+  return (
+    <div
+      className="ambient-grid"
+      style={{
+        background: '#e0e5ec',
+        minHeight: '100vh',
+      }}
+    >
+      <Navbar />
+      <main className="hero-stage">
+        <HeroSection />
+        <SmartNeighborhoodSection />
+        <MapSection />
+        <PrecisionSection />
+        <SmartParkingSection />
+        <TemporalSection />
+        <TestimonialsSection />
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
 export default LandingPage;
