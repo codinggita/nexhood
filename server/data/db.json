@@ -1,0 +1,741 @@
+{
+  "neighborhoods": [
+    {
+      "id": "baner-pune",
+      "name": "Baner",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411045",
+      "coordinates": {
+        "lat": 18.559,
+        "lng": 73.7868
+      },
+      "nexScore": 82,
+      "confidence": "high",
+      "summary": "Balanced family-friendly micro-market with strong school access, solid arterial roads, and relatively stable utilities.",
+      "tags": [
+        "family-ready",
+        "metro growth",
+        "steady demand"
+      ],
+      "subScores": {
+        "education": 86,
+        "safety": 76,
+        "environment": 71,
+        "waterUtilities": 81,
+        "infrastructure": 88,
+        "growthPotential": 89
+      },
+      "metrics": {
+        "schoolsNearby": 14,
+        "averageRent": 38500,
+        "greenCover": 24,
+        "averageAqi": 92,
+        "monthlyPowerCuts": 1.2,
+        "waterReliability": 87
+      },
+      "aqiTrend": [
+        {
+          "month": "Jan",
+          "value": 88
+        },
+        {
+          "month": "Feb",
+          "value": 90
+        },
+        {
+          "month": "Mar",
+          "value": 94
+        },
+        {
+          "month": "Apr",
+          "value": 98
+        },
+        {
+          "month": "May",
+          "value": 96
+        },
+        {
+          "month": "Jun",
+          "value": 92
+        }
+      ],
+      "priceTrend": [
+        {
+          "year": "2022",
+          "value": 9150
+        },
+        {
+          "year": "2023",
+          "value": 9725
+        },
+        {
+          "year": "2024",
+          "value": 10380
+        },
+        {
+          "year": "2025",
+          "value": 11120
+        }
+      ],
+      "crimeBreakdown": [
+        {
+          "type": "Theft",
+          "incidents": 12
+        },
+        {
+          "type": "Disputes",
+          "incidents": 8
+        },
+        {
+          "type": "Vehicle",
+          "incidents": 4
+        },
+        {
+          "type": "Serious",
+          "incidents": 2
+        }
+      ],
+      "schools": [
+        {
+          "name": "Orchid International",
+          "rating": "A",
+          "board": "CBSE"
+        },
+        {
+          "name": "VIBGYOR High",
+          "rating": "A",
+          "board": "ICSE"
+        },
+        {
+          "name": "Pawar Public School",
+          "rating": "B+",
+          "board": "CBSE"
+        }
+      ],
+      "utilities": {
+        "waterSupply": "Reliable municipal supply with mild tanker dependency in May",
+        "power": "Minimal outages outside peak summer weekends"
+      },
+      "infrastructureProjects": [
+        {
+          "title": "Baner Road widening",
+          "eta": "Q4 2026",
+          "impact": "High"
+        },
+        {
+          "title": "Metro feeder loop",
+          "eta": "Q2 2027",
+          "impact": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "wakad-pune",
+      "name": "Wakad",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411057",
+      "coordinates": {
+        "lat": 18.5975,
+        "lng": 73.7637
+      },
+      "nexScore": 78,
+      "confidence": "medium",
+      "summary": "Fast-growing residential belt with strong appreciation upside, though traffic and air quality remain the main trade-offs.",
+      "tags": [
+        "high growth",
+        "traffic heavy",
+        "investment lens"
+      ],
+      "subScores": {
+        "education": 79,
+        "safety": 72,
+        "environment": 63,
+        "waterUtilities": 76,
+        "infrastructure": 83,
+        "growthPotential": 90
+      },
+      "metrics": {
+        "schoolsNearby": 11,
+        "averageRent": 32200,
+        "greenCover": 18,
+        "averageAqi": 108,
+        "monthlyPowerCuts": 1.7,
+        "waterReliability": 80
+      },
+      "aqiTrend": [
+        {
+          "month": "Jan",
+          "value": 101
+        },
+        {
+          "month": "Feb",
+          "value": 103
+        },
+        {
+          "month": "Mar",
+          "value": 109
+        },
+        {
+          "month": "Apr",
+          "value": 114
+        },
+        {
+          "month": "May",
+          "value": 111
+        },
+        {
+          "month": "Jun",
+          "value": 107
+        }
+      ],
+      "priceTrend": [
+        {
+          "year": "2022",
+          "value": 7600
+        },
+        {
+          "year": "2023",
+          "value": 8210
+        },
+        {
+          "year": "2024",
+          "value": 8990
+        },
+        {
+          "year": "2025",
+          "value": 9680
+        }
+      ],
+      "crimeBreakdown": [
+        {
+          "type": "Theft",
+          "incidents": 15
+        },
+        {
+          "type": "Disputes",
+          "incidents": 9
+        },
+        {
+          "type": "Vehicle",
+          "incidents": 6
+        },
+        {
+          "type": "Serious",
+          "incidents": 3
+        }
+      ],
+      "schools": [
+        {
+          "name": "Indus Champs",
+          "rating": "A-",
+          "board": "CBSE"
+        },
+        {
+          "name": "EuroSchool",
+          "rating": "B+",
+          "board": "ICSE"
+        },
+        {
+          "name": "Blue Ridge Public",
+          "rating": "B+",
+          "board": "CBSE"
+        }
+      ],
+      "utilities": {
+        "waterSupply": "Mostly stable, with tanker top-ups in early summer",
+        "power": "Occasional transformer-related interruptions"
+      },
+      "infrastructureProjects": [
+        {
+          "title": "Hinjawadi Phase 3 connector",
+          "eta": "Q1 2027",
+          "impact": "High"
+        },
+        {
+          "title": "Bus priority corridor",
+          "eta": "Q3 2026",
+          "impact": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "kothrud-pune",
+      "name": "Kothrud",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411038",
+      "coordinates": {
+        "lat": 18.5074,
+        "lng": 73.8077
+      },
+      "nexScore": 85,
+      "confidence": "high",
+      "summary": "Mature urban locality with dependable civic infrastructure, deep retail access, and a strong education network.",
+      "tags": [
+        "mature market",
+        "strong schools",
+        "stable utilities"
+      ],
+      "subScores": {
+        "education": 91,
+        "safety": 81,
+        "environment": 69,
+        "waterUtilities": 88,
+        "infrastructure": 84,
+        "growthPotential": 75
+      },
+      "metrics": {
+        "schoolsNearby": 18,
+        "averageRent": 34100,
+        "greenCover": 20,
+        "averageAqi": 95,
+        "monthlyPowerCuts": 0.8,
+        "waterReliability": 90
+      },
+      "aqiTrend": [
+        {
+          "month": "Jan",
+          "value": 91
+        },
+        {
+          "month": "Feb",
+          "value": 93
+        },
+        {
+          "month": "Mar",
+          "value": 98
+        },
+        {
+          "month": "Apr",
+          "value": 101
+        },
+        {
+          "month": "May",
+          "value": 99
+        },
+        {
+          "month": "Jun",
+          "value": 94
+        }
+      ],
+      "priceTrend": [
+        {
+          "year": "2022",
+          "value": 10150
+        },
+        {
+          "year": "2023",
+          "value": 10680
+        },
+        {
+          "year": "2024",
+          "value": 11120
+        },
+        {
+          "year": "2025",
+          "value": 11640
+        }
+      ],
+      "crimeBreakdown": [
+        {
+          "type": "Theft",
+          "incidents": 10
+        },
+        {
+          "type": "Disputes",
+          "incidents": 7
+        },
+        {
+          "type": "Vehicle",
+          "incidents": 3
+        },
+        {
+          "type": "Serious",
+          "incidents": 2
+        }
+      ],
+      "schools": [
+        {
+          "name": "MIT Junior College",
+          "rating": "A",
+          "board": "State"
+        },
+        {
+          "name": "City Pride School",
+          "rating": "A-",
+          "board": "CBSE"
+        },
+        {
+          "name": "Jog High School",
+          "rating": "A-",
+          "board": "State"
+        }
+      ],
+      "utilities": {
+        "waterSupply": "Consistent municipal supply with strong storage buffer",
+        "power": "Low outage frequency, quick restoration windows"
+      },
+      "infrastructureProjects": [
+        {
+          "title": "Paud Road streetscape",
+          "eta": "Q2 2026",
+          "impact": "Medium"
+        },
+        {
+          "title": "Stormwater upgrade",
+          "eta": "Q1 2027",
+          "impact": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "hinjawadi-pune",
+      "name": "Hinjawadi",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "pincode": "411057",
+      "coordinates": {
+        "lat": 18.5912,
+        "lng": 73.7389
+      },
+      "nexScore": 74,
+      "confidence": "medium",
+      "summary": "Tech-corridor locality suited to commuters and investors, with excellent upside but more volatile liveability metrics.",
+      "tags": [
+        "it corridor",
+        "commuter hub",
+        "volatile utilities"
+      ],
+      "subScores": {
+        "education": 73,
+        "safety": 68,
+        "environment": 60,
+        "waterUtilities": 67,
+        "infrastructure": 79,
+        "growthPotential": 92
+      },
+      "metrics": {
+        "schoolsNearby": 8,
+        "averageRent": 29800,
+        "greenCover": 16,
+        "averageAqi": 116,
+        "monthlyPowerCuts": 2.4,
+        "waterReliability": 71
+      },
+      "aqiTrend": [
+        {
+          "month": "Jan",
+          "value": 110
+        },
+        {
+          "month": "Feb",
+          "value": 114
+        },
+        {
+          "month": "Mar",
+          "value": 118
+        },
+        {
+          "month": "Apr",
+          "value": 121
+        },
+        {
+          "month": "May",
+          "value": 119
+        },
+        {
+          "month": "Jun",
+          "value": 115
+        }
+      ],
+      "priceTrend": [
+        {
+          "year": "2022",
+          "value": 6900
+        },
+        {
+          "year": "2023",
+          "value": 7540
+        },
+        {
+          "year": "2024",
+          "value": 8350
+        },
+        {
+          "year": "2025",
+          "value": 9180
+        }
+      ],
+      "crimeBreakdown": [
+        {
+          "type": "Theft",
+          "incidents": 18
+        },
+        {
+          "type": "Disputes",
+          "incidents": 11
+        },
+        {
+          "type": "Vehicle",
+          "incidents": 8
+        },
+        {
+          "type": "Serious",
+          "incidents": 4
+        }
+      ],
+      "schools": [
+        {
+          "name": "Mahindra International School",
+          "rating": "A-",
+          "board": "IB"
+        },
+        {
+          "name": "Blue Ridge Public",
+          "rating": "B+",
+          "board": "CBSE"
+        },
+        {
+          "name": "Ryan International",
+          "rating": "B+",
+          "board": "CBSE"
+        }
+      ],
+      "utilities": {
+        "waterSupply": "Mixed performance with higher summer tanker dependence",
+        "power": "Better inside integrated townships than on fringe roads"
+      },
+      "infrastructureProjects": [
+        {
+          "title": "Metro Phase 3 linkage",
+          "eta": "Q4 2027",
+          "impact": "High"
+        },
+        {
+          "title": "Ring road interchange",
+          "eta": "Q3 2028",
+          "impact": "High"
+        }
+      ]
+    }
+  ],
+  "society": {
+    "id": "society-greens",
+    "name": "NexHood Greens",
+    "city": "Pune",
+    "totalUnits": 240,
+    "occupiedUnits": 197,
+    "guestSlots": [
+      {
+        "slotId": "G-01",
+        "status": "occupied",
+        "passId": "pass-demo-1"
+      },
+      {
+        "slotId": "G-02",
+        "status": "available",
+        "passId": null
+      },
+      {
+        "slotId": "G-03",
+        "status": "occupied",
+        "passId": "pass-demo-3"
+      },
+      {
+        "slotId": "G-04",
+        "status": "occupied",
+        "passId": "pass-f13b93ba-2950-4fc2-a811-1e807e32c321"
+      },
+      {
+        "slotId": "G-05",
+        "status": "available",
+        "passId": null
+      },
+      {
+        "slotId": "G-06",
+        "status": "available",
+        "passId": null
+      },
+      {
+        "slotId": "G-07",
+        "status": "available",
+        "passId": null
+      },
+      {
+        "slotId": "G-08",
+        "status": "available",
+        "passId": null
+      },
+      {
+        "slotId": "G-09",
+        "status": "available",
+        "passId": null
+      },
+      {
+        "slotId": "G-10",
+        "status": "available",
+        "passId": null
+      },
+      {
+        "slotId": "G-11",
+        "status": "available",
+        "passId": null
+      },
+      {
+        "slotId": "G-12",
+        "status": "available",
+        "passId": null
+      }
+    ]
+  },
+  "users": [
+    {
+      "id": "user-admin-1",
+      "name": "NexHood Admin",
+      "email": "admin@nexhood.in",
+      "passwordHash": "$2b$10$TQF.hy2fHS0FkH4VffNcg.qOFtc2iOi3GX.1hktj3fmIxwjyvrdPS",
+      "role": "admin",
+      "apartment": "A-101",
+      "societyId": "society-greens",
+      "authProvider": "local",
+      "createdAt": "2026-04-25T16:03:57.669Z"
+    },
+    {
+      "id": "user-resident-1",
+      "name": "Demo Resident",
+      "email": "demo.resident@nexhood.in",
+      "passwordHash": "$2b$10$tT9xTy2.hA57q0S1mAny.u4aoeVLJomQR2.PVdviEtmibPqeNQpsm",
+      "role": "resident",
+      "apartment": "B-402",
+      "societyId": "society-greens",
+      "authProvider": "local",
+      "createdAt": "2026-04-25T16:03:57.669Z"
+    },
+    {
+      "id": "user-guard-1",
+      "name": "Gate Guard",
+      "email": "guard@nexhood.in",
+      "passwordHash": "$2b$10$xgVg74tGvghh1cHL90fFeeUO3r7ZZ9nNpovn1dn92PDXD4SVRpNOq",
+      "role": "guard",
+      "apartment": "Security Gate",
+      "societyId": "society-greens",
+      "authProvider": "local",
+      "createdAt": "2026-04-25T16:03:57.669Z"
+    },
+    {
+      "id": "user-resident-2",
+      "name": "Aarav Kulkarni",
+      "email": "aarav@nexhood.in",
+      "passwordHash": "$2b$10$tT9xTy2.hA57q0S1mAny.u4aoeVLJomQR2.PVdviEtmibPqeNQpsm",
+      "role": "resident",
+      "apartment": "A-904",
+      "societyId": "society-greens",
+      "authProvider": "local",
+      "createdAt": "2026-04-25T16:03:57.669Z"
+    },
+    {
+      "id": "user-c8d49140-6409-47b4-8af6-37bdaa026d0f",
+      "name": "Xyz Cv",
+      "email": "cvxyz707@gmail.com",
+      "passwordHash": null,
+      "role": "resident",
+      "apartment": "Unassigned",
+      "societyId": "society-greens",
+      "authProvider": "google",
+      "googleId": "115018596559511737133",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLdbd2sAowrLSQc6AMHGZNyuJk2tew8Kt57GbRrknTHJ6Kuxg=s96-c",
+      "createdAt": "2026-04-25T16:12:21.653Z"
+    }
+  ],
+  "passes": [
+    {
+      "id": "pass-demo-1",
+      "residentId": "user-resident-1",
+      "societyId": "society-greens",
+      "visitorName": "Priya Kapoor",
+      "vehicleNumber": "MH12AB1234",
+      "hostApartment": "B-402",
+      "arrivalWindowStart": "2026-04-25T15:03:57.669Z",
+      "validUntil": "2026-04-25T19:03:57.669Z",
+      "durationHours": 4,
+      "slotAssigned": "G-01",
+      "status": "active",
+      "auditLogs": [
+        {
+          "timestamp": "2026-04-25T15:43:57.669Z",
+          "scanType": "entry",
+          "result": "success",
+          "guardId": "user-guard-1",
+          "note": "Vehicle entered and assigned slot G-01."
+        }
+      ],
+      "createdAt": "2026-04-25T14:33:57.669Z",
+      "qrPayload": ""
+    },
+    {
+      "id": "pass-demo-2",
+      "residentId": "user-resident-2",
+      "societyId": "society-greens",
+      "visitorName": "Karan Shah",
+      "vehicleNumber": "MH14CX7788",
+      "hostApartment": "A-904",
+      "arrivalWindowStart": "2026-04-25T15:33:57.669Z",
+      "validUntil": "2026-04-25T17:33:57.669Z",
+      "durationHours": 2,
+      "slotAssigned": "G-02",
+      "status": "expired",
+      "auditLogs": [],
+      "createdAt": "2026-04-25T15:28:57.669Z",
+      "qrPayload": ""
+    },
+    {
+      "id": "pass-demo-3",
+      "residentId": "user-resident-1",
+      "societyId": "society-greens",
+      "visitorName": "Sonal Mehta",
+      "vehicleNumber": "MH12QP2201",
+      "hostApartment": "B-402",
+      "arrivalWindowStart": "2026-04-25T14:03:57.669Z",
+      "validUntil": "2026-04-25T20:03:57.669Z",
+      "durationHours": 6,
+      "slotAssigned": "G-03",
+      "status": "active",
+      "auditLogs": [],
+      "createdAt": "2026-04-25T14:03:57.669Z",
+      "qrPayload": ""
+    },
+    {
+      "id": "pass-f13b93ba-2950-4fc2-a811-1e807e32c321",
+      "residentId": "user-c8d49140-6409-47b4-8af6-37bdaa026d0f",
+      "societyId": "society-greens",
+      "visitorName": "Hanuman Singh",
+      "vehicleNumber": "RJ 19 UA 6945",
+      "hostApartment": "A-Block",
+      "arrivalWindowStart": "2026-04-26T23:45",
+      "validUntil": "2026-04-27T02:15:00.000Z",
+      "durationHours": 8,
+      "slotAssigned": "G-04",
+      "status": "active",
+      "auditLogs": [],
+      "createdAt": "2026-04-25T16:13:36.159Z",
+      "qrPayload": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoidmlzaXRvcl9wYXNzIiwicGFzc0lkIjoicGFzcy1mMTNiOTNiYS0yOTUwLTRmYzItYTgxMS0xZTgwN2UzMmMzMjEiLCJ2YWxpZFVudGlsIjoiMjAyNi0wNC0yN1QwMjoxNTowMC4wMDBaIiwiaWF0IjoxNzc3MTMzNjE2LCJleHAiOjE3Nzc3Mzg0MTZ9.Sa62HsBVgRr9O2YP19TgLN6gXzckID-t1gsarii9TWM",
+      "qrCode": "data:image/png;base64,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"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "inc-1",
+      "title": "Unauthorized overnight parking",
+      "severity": "medium",
+      "reportedAt": "2026-04-25T04:03:57.669Z"
+    },
+    {
+      "id": "inc-2",
+      "title": "Visitor pass expired before exit",
+      "severity": "low",
+      "reportedAt": "2026-04-24T10:03:57.669Z"
+    }
+  ]
+}
