@@ -32,13 +32,13 @@ const OpsCenterPage = () => {
         <StatCard label="Slowest Commute" value={busiestArea || '--'} hint="Peak office travel pressure hotspot." />
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <section style={panelStyle}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
             <CarFront style={{ width: 18, height: 18, color: N.teal }} />
             <h2 style={{ fontSize: '20px', fontWeight: 800, color: N.tealDeep }}>Smart Parking Command Center</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '10px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '10px' }}>
             {(data?.parkingCommandCenter?.liveOccupancy || []).slice(0, 8).map((slot) => (
               <div
                 key={slot.slotId}
@@ -92,7 +92,7 @@ const OpsCenterPage = () => {
         </section>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <section style={panelStyle}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
             <Clock3 style={{ width: 18, height: 18, color: N.teal }} />
@@ -102,7 +102,7 @@ const OpsCenterPage = () => {
             {(data?.commuteIntelligence || []).map((area) => (
               <div key={area.id} style={{ padding: '16px', borderRadius: '18px', boxShadow: 'inset 4px 4px 10px #b8bec7, inset -4px -4px 10px #ffffff' }}>
                 <div style={{ fontWeight: 900 }}>{area.name}</div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '8px', marginTop: '10px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: '8px', marginTop: '10px' }}>
                   <div><strong>Office:</strong> {area.office.peak}</div>
                   <div><strong>School:</strong> {area.school.peak}</div>
                   <div><strong>Hospital:</strong> {area.hospital.peak}</div>
@@ -121,7 +121,7 @@ const OpsCenterPage = () => {
             {(data?.sentimentEngine || []).map((row) => (
               <div key={row.id} style={{ padding: '16px', borderRadius: '18px', background: 'rgba(255,255,255,0.34)' }}>
                 <div style={{ fontWeight: 900 }}>{row.name}</div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '8px', marginTop: '10px', color: N.textLight }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '8px', marginTop: '10px', color: N.textLight }}>
                   <div>Safety {row.residentPulse.safety}</div>
                   <div>Noise {row.residentPulse.noise}</div>
                   <div>Water {row.residentPulse.water}</div>
@@ -137,6 +137,7 @@ const OpsCenterPage = () => {
 };
 
 export default OpsCenterPage;
+
 
 
 

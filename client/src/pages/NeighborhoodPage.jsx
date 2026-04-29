@@ -239,7 +239,7 @@ const NeighborhoodPage = () => {
     >
       {error ? <div style={{ color: '#d64545', marginBottom: '18px' }}>{error}</div> : null}
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '18px', marginBottom: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginBottom: '22px' }}>
         <div
           style={{
             padding: '22px',
@@ -335,11 +335,11 @@ const NeighborhoodPage = () => {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <div style={{ padding: '22px', borderRadius: '24px', background: N.bg, boxShadow: '8px 8px 16px #b8bec7, -8px -8px 16px #ffffff' }}>
           <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '18px' }}>Score Comparison</h2>
           <div style={{ height: 340 }}>
-            <ResponsiveContainer width="100%" height="100%" minWidth={240} minHeight={180}>
+            <ResponsiveContainer width="100%" height="100%" minHeight={180}>
               <RadarChart data={radarData}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="metric" />
@@ -356,7 +356,7 @@ const NeighborhoodPage = () => {
         <div style={{ padding: '22px', borderRadius: '24px', background: N.bg, boxShadow: '8px 8px 16px #b8bec7, -8px -8px 16px #ffffff' }}>
           <h2 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '18px' }}>NexScore vs AQI</h2>
           <div style={{ height: 340 }}>
-            <ResponsiveContainer width="100%" height="100%" minWidth={240} minHeight={180}>
+            <ResponsiveContainer width="100%" height="100%" minHeight={180}>
               <BarChart data={comparisonBars}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
@@ -395,7 +395,7 @@ const NeighborhoodPage = () => {
               </div>
             ) : null}
             <div style={{ height: 220, marginTop: '12px' }}>
-              <ResponsiveContainer width="100%" height="100%" minWidth={240} minHeight={180}>
+              <ResponsiveContainer width="100%" height="100%" minHeight={180}>
                 <LineChart data={area.aqiTrend}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="month" />
@@ -417,7 +417,7 @@ const NeighborhoodPage = () => {
                 <div style={{ fontSize: '15px', fontWeight: 900, color: N.tealDeep, marginBottom: '10px' }}>
                   Nearby real places within {details[area.id].nearbyAmenities.radiusMeters}m
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '8px', marginBottom: '12px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '8px', marginBottom: '12px' }}>
                   {[
                     ['schools', 'Schools'],
                     ['colleges', 'Colleges'],
@@ -466,6 +466,7 @@ const NeighborhoodPage = () => {
 };
 
 export default NeighborhoodPage;
+
 
 
 

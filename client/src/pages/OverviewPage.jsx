@@ -54,7 +54,7 @@ const OverviewPage = () => {
         <StatCard label="Tracked Areas" value={overview?.trackedNeighborhoods ?? '--'} hint="Neighborhoods available for side-by-side comparison" />
       </motion.div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <motion.div
           initial={{ opacity: 0, x: -18 }}
           animate={{ opacity: 1, x: 0 }}
@@ -140,7 +140,7 @@ const OverviewPage = () => {
               <ShieldCheck style={iconStyle} />
               <h2 style={{ fontSize: '18px', fontWeight: 800 }}>Slot Snapshot</h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '10px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: '10px' }}>
               {slots.map((slot) => (
                 <div
                   key={slot.slotId}
@@ -178,6 +178,7 @@ const OverviewPage = () => {
 };
 
 export default OverviewPage;
+
 
 
 
