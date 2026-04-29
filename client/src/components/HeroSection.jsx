@@ -36,7 +36,7 @@ const HeroSection = () => {
       style={{
         maxWidth: '860px',
         margin: '0 auto',
-        padding: '80px 48px 60px',
+        padding: '80px clamp(16px, 5vw, 48px) 60px',
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
@@ -81,7 +81,7 @@ const HeroSection = () => {
         style={{
           width: '100%',
           maxWidth: '1000px',
-          height: '400px',
+          height: 'clamp(220px, 52vw, 400px)',
           borderRadius: '30px',
           overflow: 'hidden',
           ...neu.raised,
@@ -174,6 +174,7 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
 
 
