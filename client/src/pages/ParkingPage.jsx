@@ -123,11 +123,11 @@ const ParkingPage = () => {
         </div>
       ) : null}
 
-      <div style={{ display: 'grid', gridTemplateColumns: canCreate ? '1.15fr 1fr' : '1fr', gap: '18px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: canCreate ? 'repeat(auto-fit, minmax(280px, 1fr))' : '1fr', gap: '18px' }}>
         {canCreate ? (
           <form onSubmit={createPass} style={{ padding: '22px', borderRadius: '24px', background: N.bg, boxShadow: '8px 8px 16px #b8bec7, -8px -8px 16px #ffffff' }}>
             <h2 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '18px' }}>Generate Visitor Pass</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '14px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '14px' }}>
               <input value={form.visitorName} onChange={(e) => setForm({ ...form, visitorName: e.target.value })} placeholder="Visitor name" style={inputStyle} required />
               <input value={form.vehicleNumber} onChange={(e) => setForm({ ...form, vehicleNumber: e.target.value })} placeholder="Vehicle number" style={inputStyle} required />
               <input type="datetime-local" value={form.arrivalWindowStart} onChange={(e) => setForm({ ...form, arrivalWindowStart: e.target.value })} style={inputStyle} required />
@@ -146,7 +146,7 @@ const ParkingPage = () => {
 
         <div style={{ padding: '22px', borderRadius: '24px', background: N.bg, boxShadow: '8px 8px 16px #b8bec7, -8px -8px 16px #ffffff' }}>
           <h2 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '18px' }}>Guest Slot Map</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '12px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: '12px' }}>
             {slots.map((slot) => (
               <div
                 key={slot.slotId}
@@ -169,7 +169,7 @@ const ParkingPage = () => {
 
       <div style={{ display: 'grid', gap: '18px', marginTop: '22px' }}>
         {passes.map((pass) => (
-          <div key={pass.id} style={{ padding: '22px', borderRadius: '24px', background: N.bg, boxShadow: '8px 8px 16px #b8bec7, -8px -8px 16px #ffffff', display: 'grid', gridTemplateColumns: '1fr 180px', gap: '18px', alignItems: 'center' }}>
+          <div key={pass.id} style={{ padding: '22px', borderRadius: '24px', background: N.bg, boxShadow: '8px 8px 16px #b8bec7, -8px -8px 16px #ffffff', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '18px', alignItems: 'center' }}>
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: '12px', flexWrap: 'wrap' }}>
                 <div>
@@ -190,8 +190,9 @@ const ParkingPage = () => {
                 <>
                   <div
                     style={{
-                      width: '176px',
-                      height: '176px',
+                      width: '100%',
+                      maxWidth: '176px',
+                      aspectRatio: '1 / 1',
                       margin: '0 auto',
                       background: '#ffffff',
                       borderRadius: '0',
@@ -217,7 +218,7 @@ const ParkingPage = () => {
                     onClick={() => downloadQr(pass)}
                     style={{
                       marginTop: '10px',
-                      width: '176px',
+                      width: '100%',
                       padding: '9px 12px',
                       borderRadius: '12px',
                       background: '#edf7f4',
@@ -238,6 +239,8 @@ const ParkingPage = () => {
 };
 
 export default ParkingPage;
+
+
 
 
 

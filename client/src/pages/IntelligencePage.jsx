@@ -199,7 +199,7 @@ const IntelligencePage = () => {
         <StatCard label="Decision Surfaces" value="1 Lab" hint="One place to pitch, test, and extend extraordinary product ideas." tone="warning" />
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <motion.section initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }} style={panelStyle}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
             <BrainCircuit style={iconStyle} />
@@ -245,7 +245,7 @@ const IntelligencePage = () => {
             <h2 style={sectionTitleStyle}>2. Future Risk Radar</h2>
           </div>
           <div style={{ height: 290 }}>
-            <ResponsiveContainer width="100%" height="100%" minWidth={240} minHeight={180}>
+            <ResponsiveContainer width="100%" height="100%" minHeight={180}>
               <RadarChart data={data?.futureRiskRadar || []}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="name" />
@@ -259,14 +259,14 @@ const IntelligencePage = () => {
         </motion.section>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <section style={panelStyle}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
             <Map style={iconStyle} />
             <h2 style={sectionTitleStyle}>3. Neighborhood Digital Twin</h2>
           </div>
           <div style={{ height: 280 }}>
-            <ResponsiveContainer width="100%" height="100%" minWidth={240} minHeight={180}>
+            <ResponsiveContainer width="100%" height="100%" minHeight={180}>
               <BarChart data={digitalTwinData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
@@ -306,7 +306,7 @@ const IntelligencePage = () => {
                   </div>
                   <div style={{ color: N.tealDark, fontWeight: 800 }}>{property.verdict}</div>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '10px', marginTop: '12px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px', marginTop: '12px' }}>
                   <div><strong>Livability:</strong> {property.livability}</div>
                   <div><strong>Investment:</strong> {property.investment}</div>
                 </div>
@@ -316,14 +316,14 @@ const IntelligencePage = () => {
         </section>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <section style={panelStyle}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
             <Users style={iconStyle} />
             <h2 style={sectionTitleStyle}>5. Resident Sentiment Engine</h2>
           </div>
           <div style={{ height: 280 }}>
-            <ResponsiveContainer width="100%" height="100%" minWidth={240} minHeight={180}>
+            <ResponsiveContainer width="100%" height="100%" minHeight={180}>
               <RadarChart data={sentimentRadar}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="metric" />
@@ -351,7 +351,7 @@ const IntelligencePage = () => {
             {(data?.commuteIntelligence || []).map((area) => (
               <div key={area.id} style={{ padding: '16px', borderRadius: '18px', boxShadow: 'inset 4px 4px 10px #b8bec7, inset -4px -4px 10px #ffffff' }}>
                 <div style={{ fontWeight: 900 }}>{area.name}</div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '8px', marginTop: '10px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: '8px', marginTop: '10px' }}>
                   <div><strong>Office:</strong> {area.office.peak}</div>
                   <div><strong>School:</strong> {area.school.peak}</div>
                   <div><strong>Hospital:</strong> {area.hospital.peak}</div>
@@ -362,13 +362,13 @@ const IntelligencePage = () => {
         </section>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <section style={panelStyle}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
             <CarFront style={iconStyle} />
             <h2 style={sectionTitleStyle}>7. Smart Parking Command Center</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '10px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '10px' }}>
             {(data?.parkingCommandCenter?.liveOccupancy || []).slice(0, 8).map((slot) => (
               <div
                 key={slot.slotId}
@@ -422,7 +422,7 @@ const IntelligencePage = () => {
         </section>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px', marginTop: '22px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '22px' }}>
         <section style={panelStyle}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
             <FileSearch style={iconStyle} />
@@ -502,7 +502,7 @@ const IntelligencePage = () => {
             </button>
             {simulation ? (
               <div style={{ padding: '16px', borderRadius: '18px', background: 'rgba(255,255,255,0.32)' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '10px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(92px, 1fr))', gap: '10px' }}>
                   <div><strong>Baseline:</strong> {simulation.baselineScore}</div>
                   <div><strong>Adjusted:</strong> {simulation.adjustedScore}</div>
                   <div><strong>Projected ROI:</strong> {simulation.projectedRoi}%</div>
@@ -520,7 +520,7 @@ const IntelligencePage = () => {
           <h2 style={sectionTitleStyle}>Implementation Snapshot</h2>
         </div>
         <div style={{ height: 260 }}>
-          <ResponsiveContainer width="100%" height="100%" minWidth={240} minHeight={180}>
+          <ResponsiveContainer width="100%" height="100%" minHeight={180}>
             <LineChart data={(data?.futureRiskRadar || []).map((risk) => ({ name: risk.name, growth: 100 - risk.overdevelopmentRisk, safety: 100 - risk.floodRisk, air: 100 - risk.pollutionRisk }))}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
@@ -555,6 +555,7 @@ const simulateButtonStyle = {
 };
 
 export default IntelligencePage;
+
 
 
 
